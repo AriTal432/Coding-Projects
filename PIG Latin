@@ -1,0 +1,94 @@
+print("Hi There Commander!")
+x=1
+#INTRO
+while True:
+    q = input("\nI heard that there is something that you needed coded or decoded. Is that true? Yes or No: ").lower()
+    if q == "no":
+        print("\nAll right see you later then!")
+        raise SystemExit
+    elif q == "yes":
+        print("\nOh that is great!")
+        break
+    else:
+        print("Yes or No please.")
+while True:        
+    ioro = input("\nWould you like your message Encoded or Decoded?: ").lower()
+    if ioro == "encoded":
+        print("Wow. Must be a secret.")
+        break
+    elif ioro == "decoded":
+        print("Must be a hard code to crack!")
+        break
+    else:
+        print("Enter Encoded or Decoded please!")
+#Encoding
+while ioro == "encoded":
+    while True:    
+        t = input("\nDo you wish to continue? Yes or No: ").lower()
+        x=1
+        if t == "yes":
+            print("Cool!")
+            
+        elif t =="no":
+            print("Cool!")
+            ioro = "decoded"
+            break
+        else:
+            print("Ok, lets keep encoding.")
+            
+        word = input("\nEnter the word that you would like encoded: ").lower().strip()
+        first = word[0]
+        y = word.find("qu")
+        if word.find("-") > -1:
+            print("You must be trying to convert from Pig latin to English!")
+            print("Let me redirect you!")
+
+            ioro == "decoded"
+            break
+        elif word[0] == "q" and word[1] == "u":
+            print("The word encoded is:", word[2:].upper()+"-"+word[:2].upper()+"AY")
+            break
+        elif first == "a" or first == "e" or first == "i" or first == "o" or first == "u" or first == "y":
+            print("The word encoded is:", word.upper()+"-YAY")
+            
+            
+        while True:
+            if word[x] == "a" or word[x] == "e" or word[x] == "i" or word[x] == "o" or word[x] == "u" or word[x] == "y":
+                i = word[x]
+                i=word.find(i)
+                print("The word encoded is:",word[i:].upper()+"-"+word[:i].upper()+"AY")
+                break
+            x=x+1
+
+
+    #Decoding Message
+while ioro == "decoded":
+        print("\nOn to decoding now I see!")
+        t = input("\nDo you want to quit? Yes or No: ").lower()
+        if t == "no":
+            print("Cool!")
+        
+        elif t =="yes":
+            
+            print("Cool!")
+            print("All right by then!")
+            raise SystemExit
+        else:
+            print("Ok, lets keep decoding.")
+            
+        word = input("\nEnter the message that you would like decoded(Must have a dash): ").lower().strip()
+        y = word.find("yay")
+        x = word.find("-")
+        z = word.find("ay")
+        if word.find("-") == -1:
+            print("The message must have a dash in it!")
+        elif word[0] == "a":
+            print("The word decoded is:", word[x+1:y].upper() + word[:x].upper())
+        elif word[x+1]=="q" and word[x+2] == "u":
+            x = word.find("-")
+            y = word.find("yay")
+            print("The word decoded is:", word[x+1:x+3].upper() + word[:x].upper())
+        else:
+            y = word.find("ay")
+            x = word.find("-")
+            print("The word decoded is:", word[x+1:y].upper()+word[:x].upper())
