@@ -1,0 +1,77 @@
+x =input(" The Holiday - A Mad Lib by Ariyaan Talukder - Press Enter to Continue")
+print(x)
+import math
+import random
+
+# Input From The Users
+country = input("\nEnter a country: ")
+number = input("Enter a number: ")
+mCharacter = input("Enter the name of someone you love: ")
+sCharacter = input("Enter the name of your bestfriend: ")
+noun1 = input("Enter a noun: ")
+verb1 = input("Enter a verb: ")
+number2 = input("Enter a number: ")
+personaladj1 = input("Enter an adjective to describe a person: ")
+verb2 = input("Enter a verb: ")
+personaladj2 = input("Enter an adjective to describe a person: ")
+noun2 = input("Enter a noun: ")
+color = input("Enter a color: ")
+noun3 = input("Enter a noun: ")
+game = input("Enter any type of game: ")
+verb3 = input("Enter a verb: ")
+noun4 = input("Enter a noun: ")
+color2 = input("Enter a color: ")
+noun5 = input("Enter a noun: ")
+number3 = input("Enter a number: ")
+
+
+y = input(" \nOK, you are all set! Press Enter to start")
+print(y)
+
+# Math    
+randomnumber = random.randrange(31)
+randomnum = int(randomnumber)
+rnumb = random.randrange(2,25)
+randomhours = int(rnumb)
+mchar_age=int(number2)
+schar_age=int(mchar_age + 10)
+gsw = random.randrange(3, 6)
+gamescorew = int(gsw)
+gsl = random.randrange(0, 2)
+gamescorel = int(gsl)
+slping = int(number3)
+sleepinghours = slping*2
+mcage = int(number2)
+mchar_age = mcage + 50
+
+
+
+
+# Story
+
+
+
+
+print("\nThis story starts in a fine day on the", randomnum, "of August. It was a beautiful day in", country,". The weather was amazing,", number, "degrees celcius to be exact."
+      , mCharacter, "and", sCharacter, " just got off the", noun1,". It was a", randomhours,"hour", noun1,"ride and they were both extremely tired. They did nothing but", verb1,
+      "on the ", noun1,". It was a joy for them to finally get off "
+      "and stretch their legs. None the less, they were ready to strictly explore, as thats what they came for."
+      , mCharacter," was", number2,"years old and", sCharacter," was 10 years older than they were, making them", schar_age,
+      "years old.", mCharacter,"was incredibly", personaladj1,"and loved to travel.", sCharacter,"loved to", verb2," and play basketball. They got to the", noun2,"where they were staying at for the next", rnumb,
+      "hours because they are trying to go around the globe and spend as minimal time possible in the countries visited. \n\nTheir journey in", country," begins by booking a", color, noun3,
+      "to the national monument in the country. On the gruelling journey there, they played a fun game of", game," together.", mCharacter,
+      "won the game with a score of", gamescorew,"-", gamescorel,". Suddenly, the", noun3,"swerves and hits the roadblock.", sCharacter,
+      "checks to see the driver. He layed there, unconscious. The 2 were both perplexed, not knowing what their next step will be. With the", noun3,
+      "broken, they have no choice but to", verb3,". The pair venture off into the distance"
+      "to find help. After walking around they stumble upon something that was glowing, it looked like a", noun4,".", mCharacter,"grabs it and says,\"what is this?\". Though as they handle it, it starts glowing an incredibly vibrant")
+print(color2,"\n\nCRASH! was the sound", mCharacter," woke up to.", mCharacter," looked over to see what it was. It was a", noun5," falling from the table beside them.", sCharacter," was up and about making coffee for themselves")
+print(" \"How long have I been asleep?\", asks", mCharacter,". Guess, says", sCharacter,".", mCharacter," responds with", number3,". Double that, replies",sCharacter,", you have been sleeping for", sleepinghours,"hours. ", mCharacter,
+      "is dazed as they look around, they notice that they are still in the same", noun2," and that they were still in", country,". But something felt off, something that they could not put their finger on. They shrugged it off.")
+print("\n\n*50 years later*,",mCharacter,"is in the hospital at age", mchar_age,"who has been in a lucid dream since their trip to", country,".")
+print("\n\n Thank You for playing this Mad Lib by Ariyaan Talukder")
+q = input("\nPut any symbol:")
+print(" "+q+q+q+"  "+q+q+q+q+q)
+print(q+"   "+q+"   "+q+"  ")
+print(q+q+q+q+q+"   "+q+"  ")
+print(q+"   "+q+"   "+q+"  ")
+print(q+"   "+q+"   "+q+"  ")
