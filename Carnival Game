@@ -1,0 +1,64 @@
+import pygame
+import sys
+import random
+import time
+from pygame.locals import *
+pygame.init()
+
+WINDOW = pygame.display.set_mode((1000, 780))
+pygame.display.set_caption("Carnival Assignment")
+xinc=0
+xinc2=0
+x=1
+#Put any colours you create here -- this code only needs to run once
+DARKRED = (139, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0,0,255)
+GREEN=(0,255,0)
+rand=random.randrange(1,11)
+word=""
+font=pygame.font.SysFont("Arial", 34, True, True)
+
+while True:
+
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+            sys.exit(0)
+
+        
+            if event.type == pygame.KEYDOWN:
+            
+                if event.key == pygame.K_UP:
+                    xinc=xinc+50
+                if event.key == pygame.K_DOWN:
+                    xinc2=xinc2+50    
+            if event.type==pygame.KEYUP:
+                
+                if event.key==pygame.K_UP:
+                    xinc=xinc+0
+                if event.key == pygame.K_DOWN:
+                    xinc2=xinc2+0
+        
+
+
+
+        WINDOW.fill(WHITE)
+        pygame.draw.rect(WINDOW, DARKRED, (xinc, 100, 20, 60))
+        pygame.draw.rect(WINDOW, BLUE, (xinc2, 600, 20, 60))
+   
+       
+        #GAME 1
+         
+        if xinc>=1380:
+            WINDOW.fill(DARKRED)
+            text=font.render("PLAYER 1 WINS!!!", True, BLUE)    
+            WINDOW.blit(text,(400,200))        
+        if xinc2>=1380:
+            WINDOW.fill(GREEN)
+            text2=font.render("PLAYER 2 WINS!!!", True, BLUE)  
+            WINDOW.blit(text2,(400,200))  
+
+    pygame.display.update()
